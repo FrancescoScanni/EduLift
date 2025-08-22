@@ -1,36 +1,29 @@
+/*Fonts*/
+@import url("/static/css/fonts.css");
+
+/*Carousel*/
+@import url("/static/css/carousel.css");
+
+/*Features*/
+@import url("/static/css/features.css");
+
+/*Contacts*/
+@import url("/static/css/contacts.css");
+
+/*Footer*/
+@import url("/static/css/footer.css");
+
+
 body{
     background: #426A85;
     background: linear-gradient(90deg, rgba(66, 106, 133, 1) 0%, rgba(46, 62, 73, 1) 100%);
 }
 
 
-.features{
-    background: #ececec;
-    background: linear-gradient(90deg, rgb(182, 180, 180) 0%, rgba(255, 255, 255, 1) 100%);
-}
 
 
 
-.swiper {
-    margin: 55px 0;
-    width: 100vw;
-    height: 250px;
-}
 
-.swiper-slide {
-    width: 300px !important;
-    height: 250px;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    
-}
 
-.swiper-slide img {
-      width: 65px !important;
-      height: 75px !important;
-      border-radius: 18px;
-      object-fit: cover;
-}
+
+

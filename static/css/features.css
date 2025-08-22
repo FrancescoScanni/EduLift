@@ -1,0 +1,20 @@
+.features{
+    background: #ececec;
+    background: linear-gradient(90deg, rgb(227, 227, 227) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.featureCard{
+    max-width: 350px;
+    max-height: 250;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+}

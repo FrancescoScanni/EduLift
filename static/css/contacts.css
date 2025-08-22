@@ -1,0 +1,54 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #426A85;
+  background: linear-gradient(90deg, rgba(66,106,133,1) 0%, rgba(46,62,73,1) 100%);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2),
+              0 8px 10px -6px rgba(0,0,0,0.2);
+}
+
+.contact-section h1 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-section label {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-top: 14px;
+}
+.inputBox {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9); /* semi-white for contrast */
+  color: #1a1a1a;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+.submitButton {
+  margin-top: 10px;
+  padding: 14px 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  color: #2e3e49;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  transition: bg 0.3s, transform 0.2s;
+}
