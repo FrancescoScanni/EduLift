@@ -45,44 +45,87 @@
     <!--Carousel-->
     <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide flex flex-col justify-center">
-        <h1>Ciao</h1>
-        <p>lojfkd</p>
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\tts.png" class="">
+            <h1 class="font-extrabold text-[26px]">Text to speech</h1>
+            <p class="text-[12px] text-center px-[10px] pt-[5px]">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
+        </div>
       </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\tts.png" class="">
+            <h1 class="font-extrabold text-[26px]">Text to speech</h1>
+            <p class="text-[12px] text-center px-[10px] pt-[5px]">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
+        </div>
+      </div>
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\tts.png" class="">
+            <h1 class="font-extrabold text-[26px]">Text to speech</h1>
+            <p class="text-[12px] text-center px-[10px] pt-[5px]">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
+        </div>
+      </div>
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\tts.png" class="">
+            <h1 class="font-extrabold text-[26px]">Text to speech</h1>
+            <p class="text-[12px] text-center px-[10px] pt-[5px]">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
+        </div>
+      </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
-    
 
 
-    
+    <!--Features-->
+    <div class="features w-[100vw] flex flex-col items-center pt-[40px]">
+        <h1 class="text-[32px] font-extrabold">Explore.</h1>
+        <h1 class="text-[22px] text-center mt-[10px]">A service provided by a group of students aiming to upgrade the experience</h1>
+        <div class="feats grid grid-cols-1 w-[85vw] mt-[30px] gap-6">
+            <div class="flex flex-col items-center justify-center">
+                <img src="static\media\images\tts.png" class="">
+                <h1 class="font-semibold text-[18px]">Text to speech</h1>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="static\media\images\tts.png" class="">
+                <h1 class="font-semibold text-[18px]">Text to speech</h1>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <img src="static\media\images\tts.png" class="">
+                <h1 class="font-semibold text-[18px]">Text to speech</h1>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="static\media\images\tts.png" class="">
+                <h1 class="font-semibold text-[18px]">Text to speech</h1>
+            </div>
+        </div>
+    </div>
+
 
     <script>
-        var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 20,
-        stretch: 0,
-        depth: 200,
-        modifier: 1,
-        slideShadows: true,
-      },
-      autoplay: {
-        delay: 2500, // 2.5 seconds per slide
-        disableOnInteraction: false, // keeps autoplay even after manual swipe
-      },
-      loop: true, // infinite loop
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+        const swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 2500, // 2.5 seconds per slide
+                disableOnInteraction: false, // keeps autoplay even after manual swipe
+            },
+            loop: true, // infinite loop
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
         
     </script>
 </body>
