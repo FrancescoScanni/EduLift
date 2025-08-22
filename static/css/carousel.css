@@ -14,8 +14,7 @@
     padding: 0 20px;
 }
 .swiper-slide img {
-      width: 65px !important;
-      height: 75px !important;
-      border-radius: 18px;
+      width: 65px;
+      height: 75px;
       object-fit: cover;
 }
