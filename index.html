@@ -3,10 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--swiper carousel js library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+
     <title>EduLift -  lifting learning, step by step</title>
 </head>
 <body>
+
+    <!--Header-->
+    <header class="bg-dark-cloud h-[12.5vh] flex justify-between items-center px-[6vw] pt-[15px]">
+        <!--menu-->
+        <div class="menuBox bg-[#2b363f96] w-[40px] h-[40px] flex justify-center items-center rounded-[7px]">
+            <div class="menu flex flex-col w-[18px] h-[20px] justify-between rounded gap-[2px]">
+                <div class="w-full h-[4px] bg-white rounded"></div>
+                <div class="w-full h-[4px] bg-white rounded"></div>
+                <div class="w-full h-[4px] bg-white rounded"></div>
+            </div>
+        </div>
+        <!--title & logo-->
+        <div class="bigTitle flex text-[#ffffff] font-extrabold">
+            <img src="" alt="logo">
+            <h1 class="text-[24px]">EduLift<span class="text-[12px]">.com</span></h1>
+        </div >
+        <!--logs-->
+        <div class="logs w-[65px] h-[35px] bg-[#2b363f] opacity-[0.6] rounded-[8px] flex justify-center items-center">
+            <input class="text-[#ffffff] font-semibold text-[14px]" type="button" value="Login">
+        </div>
+    </header>
+
+    <!--Intro-->
+    <div class="w-[100vw] flex flex-col justify-center items-center pt-[40px]">
+        <img class="w-[316px] h-[302px]" src="static\media\images\intro.png" alt="">
+        <h1 class="text-[32px] text-[#ffffff] font-black align-center text-center pt-[8px] leading-tight">Lift learning, step <br>by step.</h1>
+        <p class="text-[#ffffff] font-semibold text-[14px] text-center w-[80vw] pt-[20px]">A web platform designed to support students with learning difficulties, providing personalized tools and resources to make studying simpler.
+        </p>
+    </div>
+
+    <!--Carousel-->
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide flex flex-col justify-center">
+        <h1>Ciao</h1>
+        <p>lojfkd</p>
+      </div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
     
+
+
     
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 2500, // 2.5 seconds per slide
+        disableOnInteraction: false, // keeps autoplay even after manual swipe
+      },
+      loop: true, // infinite loop
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+        
+    </script>
 </body>
 </html>

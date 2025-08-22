@@ -1,0 +1,28 @@
+body{
+    background: #426A85;
+    background: linear-gradient(90deg, rgba(66, 106, 133, 1) 0%, rgba(46, 62, 73, 1) 100%);
+}
+
+.swiper {
+    margin: 40px 0;
+      width: 100vw;
+      height: 200px;
+    }
+
+.swiper-slide {
+    width: 300px !important;
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 18px;
+}
+
+.swiper-slide img {
+      display: block;
+      width: 200px !important;
+      height: 100%;
+      object-fit: cover;
+}
