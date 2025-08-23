@@ -23,8 +23,6 @@
 
 
 
-
-
     <!--Header - Mob-->
     <header class="h-[12.5vh] flex justify-between items-center px-[6vw] pt-[15px]            lg:hidden">
         <!--menu-->
@@ -45,8 +43,6 @@
             <input class="text-[#ffffff] font-semibold text-[14px]" type="button" value="Login">
         </div>
     </header>
-
-
     <!--Header - Desk-->
     <header class="hidden            lg:flex lg:justify-between lg:pl-[8vw] lg:pt-[40px] pr-[6.5vw]">
         <!--logo-->
@@ -73,9 +69,6 @@
 
 
 
-
-
-
     <!--Intro - Mobile-->
     <div class="w-[100vw] flex flex-col justify-center items-center pt-[40px] lg:hidden">
         <img class="w-[316px] h-[302px]" src="static\media\images\intro.png" alt="">
@@ -83,9 +76,8 @@
         <p class="text-[#ffffff] font-semibold text-[13px] text-center w-[80vw] pt-[20px] ibm">A web platform designed to support students with learning difficulties, providing personalized tools and resources to make studying simpler.
         </p>
     </div>
-
     <!--Intro - Desk-->
-    <div class="hidden lg:flex px-[5vw]">
+    <div class="hidden lg:flex px-[8vw]">
         <div class="info flex flex-col w-[50%] mt-[6vh] justify-center">
             <h1 class="text-[52px] text-[#ffffff] font-black leading-tight w-[36vw]">Lifting learning, step by step.</h1>
             <p class="mt-[35px] text-[#ffffff] opacity-75 text-[22px] ibm w-[40vw]">A web platform designed to support students with learning difficulties, providing personalized tools and resources to make studying simpler.</p>
@@ -96,9 +88,6 @@
             </div>
         <img class="w-[50%] h-[50%] mt-[10vh]" src="static\media\images\intro.png" alt="">
     </div>
-
-
-
 
 
 
@@ -176,53 +165,48 @@
     <div class="swiper-pagination"></div>
   </div>
 
-
-<!----------------------------------------------------------------------------------->
-
-
-    <!--Features-->
-    <div class="features w-[100%] flex flex-col items-center pt-[40px] pb-[40px]">
-        <h1 class="text-[32px] font-extrabold">Explore the features</h1>
-        <h1 class="text-[16px] text-center mt-[10px] w-[80vw] ibm leading-[22px] text-[#666666]">A service provided by a group of students aiming to turn the learning process of students with difficulties easier.</h1>
-        <div class="feats grid grid-cols-1 mt-[40px] gap-[30px] w-[80vw] text-center">
+    <!--Features - Desk & Mob-->
+    <div class="features w-[100%] flex flex-col items-center pt-[40px] pb-[80px]">
+        <h1 class="text-[32px] font-extrabold           lg:text-[48px]">Explore the features</h1>
+        <h1 class="text-[16px] text-center mt-[10px] w-[80vw] ibm leading-[22px] text-[#666666]              lg:text-[20px] font-normal lg:w-[65vw] lg:mt-[25px]">A service provided by a group of students aiming to turn the learning process of students with difficulties easier.</h1>
+        <div class="feats grid grid-cols-1 mt-[50px] gap-[30px] text-center            lg:flex lg:flex-col lg:items-center xl:gap-[60px]">
             <!--tts-->
             <div class="featureCard">
                 <img src="static/media/images/features/ttsF.jpg" class="w-full h-full object-cover">
                 <div class="featureText">
-                    <h1 class="font-bold text-[22px]">Text to speech</h1>
-                    <p class="text-[13px] mt-[7px] font-semibold w-[80%]">
+                    <h1 class="font-bold text-[22px]                   lg:text-[40px] lg:mb-[20px]">Text to speech</h1>
+                    <p class="text-[12px] mt-[7px] font-semibold w-[85%]                lg:text-[18px] lg:w-[70%] ibm">
                     Convert written notes into natural-sounding speech, making learning easier and more accessible anytime, anywhere.
                     </p>
-                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[12px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px]"/>
+                    <input type="text" placeholder="Go to section" class="ibm tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center               lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1     xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/>
                 </div>
             </div>
             <!--maps-->
             <div class="featureCard">
                 <img src="static\media\images\features\aiMap.jpg" class="w-full h-full object-cover">
                 <div class="featureText2">
-                    <h1 class="font-bold text-[22px]">AI Map generator</h1>
-                    <p class="text-[13px] mt-[7px] font-semibold w-[80%]">
+                    <h1 class="font-bold text-[22px]                     lg:text-[40px] lg:mb-[20px]">AI Map generator</h1>
+                    <p class="text-[12px] mt-[7px] font-semibold w-[85%]                   lg:text-[18px] lg:w-[70%] ibm">
                     Turn your notes into clear, structured concept maps powered by AI for faster and easier learning. Visit the section and find out!
                     </p>
-                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[12px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px]"/>
+                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center                 lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1        xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/>
                 </div>
             </div>
             <!--exercises-->
             <div class="featureCard">
                 <img src="static\media\images\features\exercF.jpg" class="w-full h-full object-cover">
                 <div class="featureText">
-                    <h1 class="font-bold text-[22px]">Guided exercises</h1>
-                    <p class="text-[13px] mt-[7px] font-semibold w-[80%]">
+                    <h1 class="font-bold text-[22px]               lg:text-[40px] lg:mb-[20px]">Guided exercises</h1>
+                    <p class="text-[12px] mt-[7px] font-semibold w-[85%]                lg:text-[18px] lg:w-[70%] ibm">
                     Step-by-step exercises with tutor support to help you practice and master concepts confidently. This function is a beta for now.
                     </p>
-                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[12px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px]"/>
+                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center                lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1           xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!--Contact us-->
+    <!--Contact us - Desk & Mob-->
     <div class="contact-section">
         <h1>Contact us</h1>
 
@@ -237,14 +221,13 @@
             <input id="mail" class="inputBox" type="email" placeholder="example: yourmail@domain.com" required>
 
             <label for="message">Your message</label>
-            <input id="message" class="inputBox messageBox mb-[20px] h-[100px]" type="text" placeholder="Your thoughts here..." required>
+            <input id="message" class="inputBox messageBox mb-[20px] h-[100px]           big" type="text" placeholder="Your thoughts here..." required>
 
             <input class="submitButton" type="submit" value="Submit">
         </form>
     </div>
 
-
-    <!--Footer-->
+    <!--Footer - Desk & Mob-->
     <footer>
         <h1 class="text-[#666666] text-[10px] mt-[5px] ibm font-semibold">2025 | <span class="text-[13px] font-extrabold">EduLift.com</span> by</h1>
         <h1 class="text-[#666666] text-[10px] mt-[3px] ibm font-semibold">Francesco Scanni - All rights reserved</h1>

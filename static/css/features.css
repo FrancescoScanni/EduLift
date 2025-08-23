@@ -1,10 +1,10 @@
 .features{
     background: #ececec;
-    background: linear-gradient(90deg, rgb(227, 227, 227) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(90deg, rgb(198, 198, 198) 0%, rgba(255, 255, 255, 1) 100%);
 }
 .featureCard{
     position: relative;
-    max-width: 350px;
+    width: 75vw;
     height: 220px;
     border-radius: 18px;
     overflow: hidden;
@@ -20,12 +20,11 @@
     bottom: 0;
     top: 0;
     width: 100%;
-    padding: 18px;
+    padding: 22px;
     background: linear-gradient(90deg,  rgba(66, 106, 133, 0.7) 0%,  rgba(66, 106, 133, 0) 190%);
     color: #ffffff;
 }
 .featureText2{
-    gap: 10px;
     text-align: end; /* text aligned to the right */
     display: flex;
     flex-direction: column;
@@ -38,4 +37,31 @@
     padding: 16px;
     background: linear-gradient(270deg,  rgba(66, 106, 133, 0.7) 0%,   rgba(66, 106, 133, 0) 190%);
     color: #ffffff;
+}
+
+
+    
+
+
+/*Desktop view*/
+
+@media (min-width: 1024px) {
+    .featureCard{
+        width: 60vw;
+        height: 55vh;
+        border-radius: 30px;
     }
+    .featureText{
+        padding: 0 40px;
+    }
+    .featureText2{
+        padding: 0 40px;
+    }
+}
+@media (min-width: 1280px) {
+    .featureCard{
+        width: 50vw;
+        height: 60vh;
+        border-radius: 30px;
+    }
+}
