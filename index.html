@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--swiper carousel js library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="static/css/style.css">
 
-    <title>Text to Speech - Upload your notes to see the magic!</title>
+    <title>EduLift -  lifting learning, step by step</title>
 </head>
 <body>
 
-    <!--chatbor-->
     <!--Chatbot ICON-->
     <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40">
         <img  class="w-[45px] h-[45px] mb-[4px]" src="static\media\images\chatbot.png" alt="">
@@ -21,45 +23,139 @@
 
 
     <!--Header-->
-    <header class=" relative w-[100vw] h-[12.5vh] flex flex-col-reverse justify-center items-center mt-[20px]">
-        <h1 class="text-[#ffffff] text-[20px] font-extrabold">EduLift<span class="text-[#ffffff] text-[10px]">.com</span></h1>
-        <img src="static\media\images\logo.png" class="w-[80px] h-[60px]">
+    <header class="h-[12.5vh] flex justify-between items-center px-[6vw] pt-[15px]">
+        <!--menu-->
+        <div class="menuBox bg-[#2b363f96] w-[40px] h-[40px] flex justify-center items-center rounded-[7px]">
+            <div class="menu flex flex-col w-[18px] h-[20px] justify-between rounded gap-[2px]">
+                <div class="w-full h-[4px] bg-white rounded"></div>
+                <div class="w-full h-[4px] bg-white rounded"></div>
+                <div class="w-full h-[4px] bg-white rounded"></div>
+            </div>
+        </div>
+        <!--title & logo-->
+        <div class="bigTitle flex text-[#ffffff] font-extrabold items-center">
+            <img class="w-[67px] h-[45px] mb-[5px]" src="static\media\images\logo.png" alt="logo">
+            <h1 class="text-[24px]">EduLift<span class="text-[12px]">.com</span></h1>
+        </div >
+        <!--logs-->
+        <div class="logs w-[65px] h-[35px] bg-[#2b363f] opacity-[0.6] rounded-[8px] flex justify-center items-center">
+            <input class="text-[#ffffff] font-semibold text-[14px]" type="button" value="Login">
+        </div>
     </header>
 
-    <!--Info-->
-    <div class="mt-[30px] text-[#ffffff] text-[28px] text-center font-bold py-[30px] px-[30px] mx-[30px] tracking-0 leading-[30px] drop-shadow-xl rounded-[20px] bg-[#2b363f96] shadow-xl">
-        <h1>Text to Speech:<br> upload your notes to see the magic!</h1>
-        <p class="mt-[28px] text-[14px] font-normal leading-[19px] ibm">Our Text-to-Speech feature turns written notes into natural-sounding audio, helping students with reading difficulties like dyslexia or attention challenges.</p>
+    <!--Intro-->
+    <div class="w-[100vw] flex flex-col justify-center items-center pt-[40px]">
+        <img class="w-[316px] h-[302px]" src="static\media\images\intro.png" alt="">
+        <h1 class="text-[32px] text-[#ffffff] font-black align-center text-center pt-[8px] leading-tight">Lift learning, step <br>by step.</h1>
+        <p class="text-[#ffffff] font-semibold text-[13px] text-center w-[80vw] pt-[20px] ibm">A web platform designed to support students with learning difficulties, providing personalized tools and resources to make studying simpler.
+        </p>
     </div>
 
-    <!--upload notes-->
-    <section class="p-4 w-[100vw] mt-[30px]">
-        <form action="#" class="flex flex-col items-center">
-            <div class="w-[50vw] h-[50px] bg-gradient-to-r from-gray-300 to-white rounded-[40px] flex justify-between items-center px-2 shadow-xl">
-            <div class="ml-[20px] text-[15px] ibm font-semibold">Upload file</div>
-            <div class="w-[40px] h-[40px] rounded-full bg-[#2b363f] flex items-center justify-center cursor-pointer">
-                <label for="fileInput" class="w-full h-full flex items-center justify-center cursor-pointer">
-                    <img src="static\media\images\folder.png" class="w-[30px] h-[30px]">
-                    <input type="file" id="fileInput" class="hidden">
-                </label>
+    <!--Carousel-->
+    <div class="swiper mySwiper z-10">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\tts.png" class="mt-[16px]">
+            <h1 class="font-extrabold text-[26px]">Text to speech</h1>
+            <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
+        </div>
+      </div>
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\maps.png" class="!w-[50px] !h-[50px] mt-[10px]">
+            <h1 class="font-extrabold text-[26px]">AI Map generator</h1>
+            <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">Turn your notes into clear, AI-generated concept maps in seconds. Our app transforms your ideas into structured, visual diagrams that make learning and understanding easier than ever.</p>
+        </div>
+      </div>
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\exercises.png" class="!w-[50px] !h-[50px]">
+            <h1 class="font-extrabold text-[26px]">Tutored excercises</h1>
+            <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">Practice with confidence through guided exercises. Work step-by-step with a tutor’s support to strengthen your skills and fully understand each concept.</p>
+        </div>
+      </div>
+      <div class="swiper-slide sw1 flex flex-col justify-center">
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+            <img src="static\media\images\chatB.png" class="mt-[10px]">
+            <h1 class="font-extrabold text-[26px]">AI Chatbot</h1>
+            <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">Engage in guided exercises with a tutor’s support, allowing you to learn efficiently, practice confidently, and master concepts step by step.</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+    <!--Features-->
+    <div class="features w-[100vw] flex flex-col items-center pt-[40px] pb-[40px]">
+        <h1 class="text-[32px] font-extrabold">Explore the features</h1>
+        <h1 class="text-[16px] text-center mt-[10px] w-[80vw] ibm leading-[22px] text-[#666666]">A service provided by a group of students aiming to turn the learning process of students with difficulties easier.</h1>
+        <div class="feats grid grid-cols-1 mt-[40px] gap-[30px] w-[80vw] text-center">
+            <!--tts-->
+            <div class="featureCard">
+                <img src="static/media/images/features/ttsF.jpg" class="w-full h-full object-cover">
+                <div class="featureText">
+                    <h1 class="font-bold text-[22px]">Text to speech</h1>
+                    <p class="text-[13px] mt-[7px] font-semibold w-[80%]">
+                    Convert written notes into natural-sounding speech, making learning easier and more accessible anytime, anywhere.
+                    </p>
+                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[12px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px]"/>
+                </div>
             </div>
+            <!--maps-->
+            <div class="featureCard">
+                <img src="static\media\images\features\aiMap.jpg" class="w-full h-full object-cover">
+                <div class="featureText2">
+                    <h1 class="font-bold text-[22px]">AI Map generator</h1>
+                    <p class="text-[13px] mt-[7px] font-semibold w-[80%]">
+                    Turn your notes into clear, structured concept maps powered by AI for faster and easier learning. Visit the section and find out!
+                    </p>
+                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[12px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px]"/>
+                </div>
             </div>
-            
-            <input type="submit" value="Generate" class="ibm text-[#ffffff] font-semibold text-[] mt-[20px] w-[28vw] h-[38px] bg-[#2b363f96] rounded-[20px] shadow-xl">
+            <!--exercises-->
+            <div class="featureCard">
+                <img src="static\media\images\features\exercF.jpg" class="w-full h-full object-cover">
+                <div class="featureText">
+                    <h1 class="font-bold text-[22px]">Guided exercises</h1>
+                    <p class="text-[13px] mt-[7px] font-semibold w-[80%]">
+                    Step-by-step exercises with tutor support to help you practice and master concepts confidently. This function is a beta for now.
+                    </p>
+                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[12px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px]"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contact us-->
+    <div class="contact-section">
+        <h1>Contact us</h1>
+
+        <form action="">
+            <label for="firstName">First name</label>
+            <input id="firstName" class="inputBox" type="text" placeholder="First name" required>
+
+            <label for="lastName">Last Name</label>
+            <input id="lastName" class="inputBox" type="text" placeholder="Last Name" required>
+
+            <label for="mail">Mail</label>
+            <input id="mail" class="inputBox" type="email" placeholder="example: yourmail@domain.com" required>
+
+            <label for="message">Your message</label>
+            <input id="message" class="inputBox messageBox mb-[20px] h-[100px]" type="text" placeholder="Your thoughts here..." required>
+
+            <input class="submitButton" type="submit" value="Submit">
         </form>
-    </section>
-
-    <!--audio generation-->
-    <div class="relative h-[80vh] w-[100vw] mt-[30px]">
-        
-        <img src="static\media\images\ttsWait.jpg" class=" absolute h-[100%] w-[100%] rounded-t-[25px] z-10">
-        <div class=" absolute ">Wait until your audio is ready...</div>
-        
     </div>
 
-    
 
-
+    <!--Footer-->
+    <footer>
+        <h1 class="text-[#666666] text-[10px] mt-[5px] ibm font-semibold">2025 | <span class="text-[13px] font-extrabold">EduLift.com</span> by</h1>
+        <h1 class="text-[#666666] text-[10px] mt-[3px] ibm font-semibold">Francesco Scanni - All rights reserved</h1>
+    </footer>
 
     <script type="module" src="static/js/script.js"></script>
 </body>

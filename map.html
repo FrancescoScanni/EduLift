@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <title>AI Map generator - Upload your notes to see the magic!</title>
+</head>
+<body>
+
+    <!--Home page-->
+    <a href="">
+        <div class="absolute w-[45px] h-[45px] ml-[6vw] mt-[2vh] rounded-full bg-[#ffffff] flex justify-center items-center shadow-xl">
+            <img src="static\media\images\arrow2.png" class="rotate-[180deg]">
+        </div>
+    </a>
+
+    <!--Chatbot ICON-->
+    <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40">
+        <img  class="w-[45px] h-[45px] mb-[4px]" src="static\media\images\chatbot.png" alt="">
+    </div>
+    <div class="fixed rounded-[20pxpx] w-[100px] h-[80px] ml-[59vw] mt-[74vh] flex justify-center items-center z-40">
+        <img class="w-[150px] h-[75px]" src="static\media\images\speech.png" alt="">
+    </div>
+
+
+    <!--Header-->
+    <header class=" relative w-[100vw] h-[12.5vh] flex flex-col-reverse justify-center items-center mt-[20px]">
+        <h1 class="text-[#ffffff] text-[20px] font-extrabold">EduLift<span class="text-[#ffffff] text-[10px]">.com</span></h1>
+        <img src="static\media\images\logo.png" class="w-[80px] h-[60px]">
+    </header>
+
+    <!--Info-->
+    <div class="mt-[30px] text-[#ffffff] text-[28px] text-center font-bold py-[30px] px-[30px] mx-[30px] tracking-0 leading-[30px] drop-shadow-xl rounded-[20px] bg-[#2b363f96] shadow-xl flex flex-col items-center">
+        <h1>AI Map Generator:<br> give your notes life</h1>
+        <div class="rounded-full w-[30vw] h-[38px] bg-white mt-[24px] shadow-xl flex justify-between items-center px-[4px] pl-[6px]">
+            <p class="text-[#000000] text-[10px] font-bold">Discover how</p>
+            <div class="w-[33px] h-[33px] rounded-full bg-[#2b363f] flex justify-center items-center">
+                <img src="static\media\images\arrow.png" class="w-[18px] h-[18px] rotate-[-45deg]">
+            </div>
+        </div>
+        <p class="mt-[24px] text-[14px] font-normal leading-[19px] ibm">AI Map Generator creates structured concept maps highlighting key connections. This makes studying more visual for students with dyslexia or ADHD.</p>
+    </div>
+
+    <!--upload notes-->
+    <section class="p-4 w-[100vw] mt-[30px]">
+        <form action="#" class="flex flex-col items-center">
+            <div class="w-[50vw] h-[50px] bg-gradient-to-r from-gray-300 to-white rounded-[40px] flex justify-between items-center px-2 shadow-xl">
+            <div class="ml-[20px] text-[15px] ibm font-semibold">Upload file</div>
+            <div class="w-[40px] h-[40px] rounded-full bg-[#2b363f] flex items-center justify-center cursor-pointer">
+                <label for="fileInput" class="w-full h-full flex items-center justify-center cursor-pointer">
+                    <img src="static\media\images\folder.png" class="w-[30px] h-[30px]">
+                    <input type="file" id="fileInput" class="hidden">
+                </label>
+            </div>
+            </div>
+            
+            <input type="submit" value="Generate" class="ibm text-[#ffffff] font-semibold text-[] mt-[20px] w-[28vw] h-[38px] bg-[#2b363f96] rounded-[20px] shadow-xl">
+        </form>
+    </section>
+
+    <!--map generation-->
+    <div class="relative h-[80vh] w-[100vw] mt-[30px] flex flex-col items-center">
+        <img src="static\media\images\mapWait.jpg" class="absolute h-[100%] w-[100%] rounded-t-[25px] z-10">
+        
+        <div class="mt-[8vh] px-[14vw] text-center absolute inset-0 flex flex-col items-center z-20">
+            <h1 class="text-white text-[27px] font-bold drop-shadow-lg leading-[30px]">
+                Wait here until your map is ready...
+            </h1>
+            <input type="button" value="Download" class="ibm text-[#ffffff] font-semibold mt-[20px] w-[28vw] h-[38px] bg-[#2b363f] rounded-[20px] shadow-xl flex flex-col items-end">
+            <div class="map mt-[30px] w-[70vw] h-[40vh] bg-[#ffffff] rounded-[38px] opacity-60 shadow-xl border border-[#2b363f] border-[6px]">
+                <p class="text-[#ffffff] h-[50%]">OK</p>
+                <div class="w-[100%] h-[50%] mb-0 bg-[#000000] rounded-b-[30px] opacity-95 flex justify-center">
+                    <p class="text-white mt-[10px]">Preview</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+    <footer>
+        <h1 class="text-[#666666] text-[10px] mt-[5px] ibm font-semibold">2025 | <span class="text-[13px] font-extrabold">EduLift.com</span> by</h1>
+        <h1 class="text-[#666666] text-[10px] mt-[3px] ibm font-semibold">Francesco Scanni - All rights reserved</h1>
+    </footer>
+
+    
+    <script type="module" src="static/js/script.js"></script>
+</body>
+</html>
