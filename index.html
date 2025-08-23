@@ -11,19 +11,22 @@
 
     <title>EduLift -  lifting learning, step by step</title>
 </head>
-<body>
+<body class="overflow-x:hidden ">
 
-    <!--Chatbot ICON-->
-    <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40">
-        <img  class="w-[45px] h-[45px] mb-[4px]" src="static\media\images\chatbot.png" alt="">
+    <!--Chatbot ICON - Desk & Mob-->
+    <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40                               lg:w-[78px] lg:h-[78px] lg:ml-[88vw] lg:mt-[80vh]">
+        <img  class="w-[45px] h-[45px] mb-[4px]                          lg:w-[68px] lg:h-[68px]" src="static\media\images\chatbot.png" alt="">
     </div>
-    <div class="fixed rounded-[20pxpx] w-[100px] h-[80px] ml-[59vw] mt-[74vh] flex justify-center items-center z-40">
-        <img class="w-[150px] h-[75px]" src="static\media\images\speech.png" alt="">
+    <div class="fixed rounded-[20pxpx] w-[100px] h-[80px] ml-[59vw] mt-[74vh] flex justify-center items-center z-40                       lg:w-[150px] lg:h-[170px] lg:ml-[76vw] lg:mt-[62vh]   xl:w-[210px] xl:h-[190px] xl:ml-[76vw] xl:mt-[57vh]">
+        <img class="w-[150px] h-[75px] lg:h-[110px] xl:h-[170px] xl:w-[210px]" src="static\media\images\speech.png" alt="">
     </div>
 
 
-    <!--Header-->
-    <header class="h-[12.5vh] flex justify-between items-center px-[6vw] pt-[15px]">
+
+
+
+    <!--Header - Mob-->
+    <header class="h-[12.5vh] flex justify-between items-center px-[6vw] pt-[15px]            lg:hidden">
         <!--menu-->
         <div class="menuBox bg-[#2b363f96] w-[40px] h-[40px] flex justify-center items-center rounded-[7px]">
             <div class="menu flex flex-col w-[18px] h-[20px] justify-between rounded gap-[2px]">
@@ -43,52 +46,142 @@
         </div>
     </header>
 
-    <!--Intro-->
-    <div class="w-[100vw] flex flex-col justify-center items-center pt-[40px]">
+
+    <!--Header - Desk-->
+    <header class="hidden            lg:flex lg:justify-between lg:pl-[8vw] lg:pt-[40px] pr-[6.5vw]">
+        <!--logo-->
+        <div class="bigTitle flex justify-around items-end">
+            <img class="w-[120px] h-[85px]" src="static\media\images\logo.png" alt="logo">
+            <h1 class="ml-[5%] text-[45px] text-[#ffffff] font-extrabold">EduLift<span class="text-[12px]">.com</span></h1>
+        </div >
+
+        <!--menu and login-->
+        <div class="flex gap-8 items-center mt-[2vh]">
+            <div class="flex gap-6 items-center">
+                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">About us</h1>
+                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">Features</h1>
+                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">Chatbot</h1>
+                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">Contact us</h1>
+            </div>
+            <div class="logs w-[8vw] h-[3.5vw] bg-[#2b363f] opacity-[0.6] rounded-[10px] flex justify-center items-center">
+                <input class="text-[#ffffff] font-semibold text-[17px] shadow-xl" type="button" value="Login">
+            </div>
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+    <!--Intro - Mobile-->
+    <div class="w-[100vw] flex flex-col justify-center items-center pt-[40px] lg:hidden">
         <img class="w-[316px] h-[302px]" src="static\media\images\intro.png" alt="">
         <h1 class="text-[32px] text-[#ffffff] font-black align-center text-center pt-[8px] leading-tight">Lift learning, step <br>by step.</h1>
         <p class="text-[#ffffff] font-semibold text-[13px] text-center w-[80vw] pt-[20px] ibm">A web platform designed to support students with learning difficulties, providing personalized tools and resources to make studying simpler.
         </p>
     </div>
 
-    <!--Carousel-->
+    <!--Intro - Desk-->
+    <div class="hidden lg:flex px-[5vw]">
+        <div class="info flex flex-col w-[50%] mt-[6vh] justify-center">
+            <h1 class="text-[52px] text-[#ffffff] font-black leading-tight w-[36vw]">Lifting learning, step by step.</h1>
+            <p class="mt-[35px] text-[#ffffff] opacity-75 text-[22px] ibm w-[40vw]">A web platform designed to support students with learning difficulties, providing personalized tools and resources to make studying simpler.</p>
+            <div class="innerButton w-[40%] h-[54px] bg-[#ffffff] rounded-full flex items-center justify-center mt-[7vh]">
+                <a href="#proj">
+                    <input type="button" value="Get started" class="button text-[#2b363f] ibm text-[20px] font-bold"></div>
+                </a>
+            </div>
+        <img class="w-[50%] h-[50%] mt-[10vh]" src="static\media\images\intro.png" alt="">
+    </div>
+
+
+
+
+
+
+    <!--Carousel - Desk & Mob-->
     <div class="swiper mySwiper z-10">
     <div class="swiper-wrapper">
-      <div class="swiper-slide sw1 flex flex-col justify-center">
-        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+      <div class="swiper-slide relative sw1 flex flex-col justify-center ">
+        <img src="static\media\images\ttsCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
+        <!--mob-->
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]                 lg:hidden">
             <img src="static\media\images\tts.png" class="mt-[16px]">
             <h1 class="font-extrabold text-[26px]">Text to speech</h1>
             <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
         </div>
+        <!--desk-->
+        <div class="TTS hidden flex-col            lg:flex lg:flex-col items-center z-40 transition-transform duration-300 hover:scale-105">
+            <img src="static\media\images\tts2.png" class="!w-[150px] !h-[150px] !opacity-[100] ">
+            <h1 class="font-extrabold text-[36px] mt-[10px]">Text to speech</h1>
+            <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
+        </div>
       </div>
-      <div class="swiper-slide sw1 flex flex-col justify-center">
-        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
-            <img src="static\media\images\maps.png" class="!w-[50px] !h-[50px] mt-[10px]">
+
+
+      <div class="swiper-slide relative sw1 flex flex-col justify-center">
+        <img src="static\media\images\mapCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
+        <!--mob-->
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]                  lg:hidden">
+            <img src="static\media\images\maps.png" class="!w-[50px] !h-[50px]">
             <h1 class="font-extrabold text-[26px]">AI Map generator</h1>
             <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">Turn your notes into clear, AI-generated concept maps in seconds. Our app transforms your ideas into structured, visual diagrams that make learning and understanding easier than ever.</p>
         </div>
+        <!--desk-->
+        <div class="TTS hidden flex-col            lg:flex lg:flex-col items-center z-40 transition-transform duration-300 hover:scale-105">
+            <img src="static\media\images\maps2.png" class="!w-[150px] !h-[150px] !opacity-[100] ">
+            <h1 class="font-extrabold text-[36px] mt-[10px]">AI Map generator</h1>
+            <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">Turn your notes into clear, AI-generated concept maps in seconds. Our app transforms your ideas into structured, visual diagrams that make learning and understanding easier than ever.</p>
+        </div>
       </div>
+
+
       <div class="swiper-slide sw1 flex flex-col justify-center">
-        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+        <img src="static\media\images\exeCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
+        <!--mob-->
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]                lg:hidden">
             <img src="static\media\images\exercises.png" class="!w-[50px] !h-[50px]">
             <h1 class="font-extrabold text-[26px]">Tutored excercises</h1>
             <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">Practice with confidence through guided exercises. Work step-by-step with a tutor’s support to strengthen your skills and fully understand each concept.</p>
         </div>
+        <!--desk-->
+        <div class="TTS hidden flex-col            lg:flex lg:flex-col items-center z-40 transition-transform duration-300 hover:scale-105">
+            <img src="static\media\images\exe2.png" class="!w-[150px] !h-[150px] !opacity-[100] ">
+            <h1 class="font-extrabold text-[36px] mt-[10px]">Tutored excercises</h1>
+            <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">Practice with confidence through guided exercises. Work step-by-step with a tutor’s support to strengthen your skills and fully understand each concept.</p>
+        </div>
       </div>
+
+
       <div class="swiper-slide sw1 flex flex-col justify-center">
-        <div class="TTS flex flex-col justify-start items-center mb-[40px]">
+        <img src="static\media\images\chatCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
+        <!--mob-->
+        <div class="TTS flex flex-col justify-start items-center mb-[40px]                lg:hidden">
             <img src="static\media\images\chatB.png" class="mt-[10px]">
             <h1 class="font-extrabold text-[26px]">AI Chatbot</h1>
             <p class="text-[10px] text-center px-[10px] pt-[5px] ibm">Engage in guided exercises with a tutor’s support, allowing you to learn efficiently, practice confidently, and master concepts step by step.</p>
         </div>
+        <!--desk-->
+        <div class="TTS hidden flex-col            lg:flex lg:flex-col items-center z-40 transition-transform duration-300 hover:scale-105">
+            <img src="static\media\images\chat2.png" class="!w-[150px] !h-[150px] !opacity-[100] ">
+            <h1 class="font-extrabold text-[36px] mt-[10px]">AI Chatbo</h1>
+            <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">Engage in guided exercises with a tutor’s support, allowing you to learn efficiently, practice confidently, and master concepts step by step.</p>
+        </div>
       </div>
+
     </div>
     <div class="swiper-pagination"></div>
   </div>
 
 
+<!----------------------------------------------------------------------------------->
+
+
     <!--Features-->
-    <div class="features w-[100vw] flex flex-col items-center pt-[40px] pb-[40px]">
+    <div class="features w-[100%] flex flex-col items-center pt-[40px] pb-[40px]">
         <h1 class="text-[32px] font-extrabold">Explore the features</h1>
         <h1 class="text-[16px] text-center mt-[10px] w-[80vw] ibm leading-[22px] text-[#666666]">A service provided by a group of students aiming to turn the learning process of students with difficulties easier.</h1>
         <div class="feats grid grid-cols-1 mt-[40px] gap-[30px] w-[80vw] text-center">
