@@ -14,10 +14,10 @@
 <body class="overflow-x:hidden ">
 
     <!--Chatbot ICON - Desk & Mob-->
-    <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40                               lg:w-[78px] lg:h-[78px] lg:ml-[88vw] lg:mt-[80vh]">
+    <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40 hover:scale-110 transition transition-duration-200                                lg:w-[78px] lg:h-[78px] lg:ml-[88vw] lg:mt-[80vh]">
         <img  class="w-[45px] h-[45px] mb-[4px]                          lg:w-[68px] lg:h-[68px]" src="static\media\images\chatbot.png" alt="">
     </div>
-    <div class="fixed rounded-[20pxpx] w-[100px] h-[80px] ml-[59vw] mt-[74vh] flex justify-center items-center z-40                       lg:w-[150px] lg:h-[170px] lg:ml-[76vw] lg:mt-[62vh]   xl:w-[210px] xl:h-[190px] xl:ml-[76vw] xl:mt-[57vh]">
+    <div class="fixed rounded-[20pxpx] w-[100px] h-[80px] ml-[59vw] mt-[74vh] flex justify-center items-center z-40 hover:scale-105 transition transition-duration-200                       lg:w-[150px] lg:h-[170px] lg:ml-[76vw] lg:mt-[62vh]   xl:w-[210px] xl:h-[190px] xl:ml-[76vw] xl:mt-[57vh]">
         <img class="w-[150px] h-[75px] lg:h-[110px] xl:h-[170px] xl:w-[210px]" src="static\media\images\speech.png" alt="">
     </div>
 
@@ -54,13 +54,13 @@
         <!--menu and login-->
         <div class="flex gap-8 items-center mt-[2vh]">
             <div class="flex gap-6 items-center">
-                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">About us</h1>
-                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">Features</h1>
-                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">Chatbot</h1>
-                <h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75">Contact us</h1>
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">About us</h1></a>
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Features</h1></a>
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Chatbot</h1></a>
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Contact us</h1></a>
             </div>
-            <div class="logs w-[8vw] h-[3.5vw] bg-[#2b363f] opacity-[0.6] rounded-[10px] flex justify-center items-center">
-                <input class="text-[#ffffff] font-semibold text-[17px] shadow-xl" type="button" value="Login">
+            <div class="logs w-[8vw] h-[3.5vw] bg-[#2b363f] opacity-[0.6] rounded-[10px] flex justify-center items-center hover:scale-105 hover:opacity-[0.9] transition transition-duration-200 cursor-pointer">
+                <input class="text-[#ffffff] cursor-pointer font-semibold text-[17px] shadow-xl" type="button" value="Login">
             </div>
         </div>
 
@@ -81,12 +81,10 @@
         <div class="info flex flex-col w-[50%] mt-[6vh] justify-center">
             <h1 class="text-[52px] text-[#ffffff] font-black leading-tight w-[36vw]">Lifting learning, step by step.</h1>
             <p class="mt-[35px] text-[#ffffff] opacity-75 text-[22px] ibm w-[40vw]">A web platform designed to support students with learning difficulties, providing personalized tools and resources to make studying simpler.</p>
-            <div class="innerButton w-[40%] h-[54px] bg-[#ffffff] rounded-full flex items-center justify-center mt-[7vh]">
-                <a href="#proj">
-                    <input type="button" value="Get started" class="button text-[#2b363f] ibm text-[20px] font-bold"></div>
-                </a>
-            </div>
-        <img class="w-[50%] h-[50%] mt-[10vh]" src="static\media\images\intro.png" alt="">
+            <a href="#features" class="w-[35%] h-[10%] mt-[7vh] hover:scale-105 transition transition-duration-300"><div class="innerButton w-[100%] h-[54px] bg-[#ffffff] rounded-full flex items-center justify-center ">
+                <input type="button" value="Get started" class="button text-[#2b363f] ibm text-[20px] font-bold cursor-pointer "></div>
+            </div></a>
+        <img class="w-[50%] h-[50%] mt-[10vh] hover:scale-105 transition transition-duration-200" src="static\media\images\intro.png" alt="">
     </div>
 
 
@@ -94,7 +92,7 @@
     <!--Carousel - Desk & Mob-->
     <div class="swiper mySwiper z-10">
     <div class="swiper-wrapper">
-      <div class="swiper-slide relative sw1 flex flex-col justify-center ">
+      <a href="tts.html" class="swiper-slide"><div class="swiper-slide relative sw1 flex flex-col justify-center ">
         <img src="static\media\images\ttsCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
         <!--mob-->
         <div class="TTS flex flex-col justify-start items-center mb-[40px]                 lg:hidden">
@@ -109,9 +107,9 @@
             <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">The TTS function will make you able to listen to written content in a clear, natural voice. This feature supports learners with reading difficulties, dyslexia, or attention challenges</p>
         </div>
       </div>
+      </a>
 
-
-      <div class="swiper-slide relative sw1 flex flex-col justify-center">
+      <a href="maps.html" class="swiper-slide"><div class="swiper-slide relative sw1 flex flex-col justify-center">
         <img src="static\media\images\mapCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
         <!--mob-->
         <div class="TTS flex flex-col justify-start items-center mb-[40px]                  lg:hidden">
@@ -126,9 +124,9 @@
             <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">Turn your notes into clear, AI-generated concept maps in seconds. Our app transforms your ideas into structured, visual diagrams that make learning and understanding easier than ever.</p>
         </div>
       </div>
+      </a>
 
-
-      <div class="swiper-slide sw1 flex flex-col justify-center">
+      <a href="exe.html" class="swiper-slide"><div class="swiper-slide sw1 flex flex-col justify-center">
         <img src="static\media\images\exeCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
         <!--mob-->
         <div class="TTS flex flex-col justify-start items-center mb-[40px]                lg:hidden">
@@ -143,9 +141,9 @@
             <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">Practice with confidence through guided exercises. Work step-by-step with a tutor’s support to strengthen your skills and fully understand each concept.</p>
         </div>
       </div>
+      </a>
 
-
-      <div class="swiper-slide sw1 flex flex-col justify-center">
+      <a href="" class="swiper-slide"><div class="swiper-slide sw1 flex flex-col justify-center">
         <img src="static\media\images\chatCarousel.jpg" class="hidden lg:flex lg:absolute lg:!w-[100%] lg:!h-[100%] z-10 bgC">
         <!--mob-->
         <div class="TTS flex flex-col justify-start items-center mb-[40px]                lg:hidden">
@@ -160,13 +158,13 @@
             <p class="text-[16px] text-center w-[75%] pt-[5px] mt-[10px] ibm font-semibold">Engage in guided exercises with a tutor’s support, allowing you to learn efficiently, practice confidently, and master concepts step by step.</p>
         </div>
       </div>
-
+      </a>
     </div>
     <div class="swiper-pagination"></div>
   </div>
 
     <!--Features - Desk & Mob-->
-    <div class="features w-[100%] flex flex-col items-center pt-[40px] pb-[80px]">
+    <div id="features" class="features w-[100%] flex flex-col items-center pt-[40px] pb-[80px]">
         <h1 class="text-[32px] font-extrabold           lg:text-[48px]">Explore the features</h1>
         <h1 class="text-[16px] text-center mt-[10px] w-[80vw] ibm leading-[22px] text-[#666666]              lg:text-[20px] font-normal lg:w-[65vw] lg:mt-[25px]">A service provided by a group of students aiming to turn the learning process of students with difficulties easier.</h1>
         <div class="feats grid grid-cols-1 mt-[50px] gap-[30px] text-center            lg:flex lg:flex-col lg:items-center xl:gap-[60px]">
@@ -178,7 +176,7 @@
                     <p class="text-[12px] mt-[7px] font-semibold w-[85%]                lg:text-[18px] lg:w-[70%] ibm">
                     Convert written notes into natural-sounding speech, making learning easier and more accessible anytime, anywhere.
                     </p>
-                    <input type="text" placeholder="Go to section" class="ibm tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center               lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1     xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/>
+                    <a href="tts.html" class=""><input type="button" value="Go to section" class="ibm cursor-pointer hover:scale-105 transition transition-duration-200 tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center               lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1     xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/></a>
                 </div>
             </div>
             <!--maps-->
@@ -189,18 +187,18 @@
                     <p class="text-[12px] mt-[7px] font-semibold w-[85%]                   lg:text-[18px] lg:w-[70%] ibm">
                     Turn your notes into clear, structured concept maps powered by AI for faster and easier learning. Visit the section and find out!
                     </p>
-                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center                 lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1        xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/>
+                    <a href="maps.html"><input type="button" value="Go to section" class="ibm cursor-pointer hover:scale-105 transition transition-duration-200 tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center               lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1     xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/></a>
                 </div>
             </div>
             <!--exercises-->
-            <div class="featureCard">
+            <div class="featureCard ">
                 <img src="static\media\images\features\exercF.jpg" class="w-full h-full object-cover">
                 <div class="featureText">
                     <h1 class="font-bold text-[22px]               lg:text-[40px] lg:mb-[20px]">Guided exercises</h1>
                     <p class="text-[12px] mt-[7px] font-semibold w-[85%]                lg:text-[18px] lg:w-[70%] ibm">
                     Step-by-step exercises with tutor support to help you practice and master concepts confidently. This function is a beta for now.
                     </p>
-                    <input type="text" placeholder="Go to section"class="ibm tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center                lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1           xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/>
+                    <a href="exe.html"><input type="button" value="Go to section" class="ibm cursor-pointer hover:scale-105 transition transition-duration-200 tracking-[0px] text-[11px] w-[41.5%] p-2 rounded-lg text-white bg-[#426A85]/80 font-semibold placeholder-gray-200 mt-[10px] text-center               lg:mt-[40px] lg:w-[14vw] lg:h-[4vw] lg:text-[16px] lg:opacity-1     xl:rounded-[20px] xl:text-[19px] xl:px-[15px]"/></a>
                 </div>
             </div>
         </div>
@@ -223,7 +221,7 @@
             <label for="message">Your message</label>
             <input id="message" class="inputBox messageBox mb-[20px] h-[100px]           big" type="text" placeholder="Your thoughts here..." required>
 
-            <input class="submitButton" type="submit" value="Submit">
+            <input class="submitButton cursor-pointer hover:scale-105 transition transition-duration-200" type="submit" value="Submit">
         </form>
     </div>
 
