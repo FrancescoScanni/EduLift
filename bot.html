@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Chatbot AI - ask everything and it will answer</title>
+</head>
+<body>
+
+    <!--Home page - Desk & Mob-->
+    <a href="" class="lg:hidden">
+        <div class="absolute w-[45px] h-[45px] ml-[6vw] mt-[2vh] rounded-full bg-[#ffffff] flex justify-center items-center shadow-xl">
+            <img src="static\media\images\arrow2.png" class="rotate-[180deg]">
+        </div>
+    </a>
+
+    <!--Header - Mobile-->
+    <header class="relative w-[100vw] h-[12.5vh] flex flex-col-reverse justify-center items-center mt-[20px]                 lg:hidden">
+        <h1 class="text-[#ffffff] text-[20px] font-extrabold">EduLift<span class="text-[#ffffff] text-[10px]">.com</span></h1>
+        <img src="static\media\images\logo.png" class="w-[80px] h-[60px]">
+    </header>
+    <!--Header - Desk-->
+    <header class="hidden            lg:flex lg:justify-between lg:pl-[8vw] lg:pt-[40px] pr-[6.5vw]">
+        <!--logo-->
+        <div class="bigTitle flex justify-around items-end">
+            <img class="w-[120px] h-[85px]" src="static\media\images\logo.png" alt="logo">
+            <h1 class="ml-[5%] text-[45px] text-[#ffffff] font-extrabold">EduLift<span class="text-[12px]">.com</span></h1>
+        </div >
+
+        <!--menu and login-->
+        <div class="flex gap-8 items-center mt-[2vh]">
+            <div class="flex gap-6 items-center">
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">About us</h1></a>
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Features</h1></a>
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Chatbot</h1></a>
+                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Contact us</h1></a>
+            </div>
+            <div class="logs w-[8vw] h-[3.5vw] bg-[#2b363f] opacity-[0.6] rounded-[10px] flex justify-center items-center hover:scale-105 hover:opacity-[0.9] transition transition-duration-200 cursor-pointer">
+                <input class="text-[#ffffff] cursor-pointer font-semibold text-[17px] shadow-xl" type="button" value="Login">
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!--Info - Desk & Mob-->
+    <div class="mt-[30px] text-[#ffffff] text-[28px] text-center font-bold py-[30px] px-[30px] mx-[30px] tracking-0 leading-[30px] drop-shadow-xl rounded-[20px] bg-[#2b363f96] shadow-xl flex flex-col items-center                    lg:mx-[19vw] lg:my-[8vh] lg:text-[38px] lg:leading-[40px] lg:py-[60px] lg:rounded-[30px] lg:border lg:border-[4px] lg:border-[#ffffff]">
+        <h1 class="lg:px-[6vw]">Sorry, this tool isn't available yet.</h1>
+        <div class="rounded-full w-[30vw] h-[38px] bg-white mt-[24px] shadow-xl flex justify-between items-center px-[4px] pl-[6px]         lg:h-[60px] lg:mt-[40px]">
+            <p class="text-[#000000] text-[13px] font-semibold flex items-center          lg:h-[60px] lg:w-[15vw] lg:ml-[10px] lg:text-[18px]">Go back</p>
+            <div class="w-[33px] h-[33px] rounded-full bg-[#2b363f] flex justify-center items-center hover:scale-105 transition transition-duration-200        lg:w-[45px] lg:h-[45px] lg:mr-[10px]">
+                <img src="static\media\images\arrow.png" class="w-[18px] h-[18px] rotate-[-180deg]">
+            </div>
+        </div>
+        <img src="static\media\images\noContent.png" class="w-[45%] h-[45%] mt-[30px]">
+    </div>
+
+
+
+
+
+    <!--Footer - Desk & Mob-->
+    <footer>
+        <h1 class="text-[#666666] text-[10px] mt-[5px] ibm font-semibold">2025 | <span class="text-[13px] font-extrabold">EduLift.com</span> by</h1>
+        <h1 class="text-[#666666] text-[10px] mt-[3px] ibm font-semibold">Francesco Scanni - All rights reserved</h1>
+    </footer>
+    
+    <script type="module" src="static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <title>EduLift - Registration page</title>
+</head>
+<body class="h-[100%]">
+
+    <!--Home page - Desk & Mob-->
+    <a href="index.html" class="lg:hidden">
+        <div class="absolute w-[45px] h-[45px] ml-[6vw] mt-[2vh] rounded-full bg-[#ffffff] flex justify-center items-center shadow-xl">
+            <img src="static\media\images\arrow2.png" class="rotate-[180deg]">
+        </div>
+    </a>
+
+    <!--Header - Mobile-->
+    <header class="relative w-[100vw] h-[12.5vh] flex flex-col-reverse justify-center items-center mt-[20px]                 lg:hidden">
+        <h1 class="text-[#ffffff] text-[20px] font-extrabold">EduLift<span class="text-[#ffffff] text-[10px]">.com</span></h1>
+        <img src="static\media\images\logo.png" class="w-[80px] h-[60px]">
+    </header>
+
+    <!--Subtitle-->
+    <div class="mx-[10vw] flex flex-col items-center justify-center text-[white] text-[18px] font-semibold mt-[10vh]">
+        <p>Welcome to</p>
+        <h1 class="text-[20px] font-bold">EduLift registration interface</h1>
+    </div>
+
+
+    <!--login form-->
+    <div class=" flex flex-col py-[4vh] items-center mt-[3vh] bg-[#2b363f] mx-[10vw] rounded-[30px]">
+        <h1 class="font-bold text-white text-[22px]">Register now!</h1>
+
+        <form action="" method="post" class="flex flex-col items-center text-[14px] mt-[4vh] gap-4">
+            <div class="name flex items-end justify-around">
+                <img src="static\media\images\name.png" class="w-[36px]">
+                <div class="flex flex-col ml-[15px]">
+                    <label class="text-white font-semibold mb-[2px] ml-[5px]" for="">Name</label>
+                    <input required type="text" placeholder="Your name" class=" rounded-[10px] w-[170px] h-[35px] p-[10px]">
+                </div>
+                
+            </div>
+            <div class="name flex items-end justify-around">
+                <img src="static\media\images\name.png" class="w-[36px]">
+                <div class="flex flex-col ml-[15px]">
+                    <label class="text-white font-semibold mb-[2px] ml-[5px]" for="">Surname</label>
+                    <input required type="text" placeholder="Your surname" class=" rounded-[10px] w-[170px] h-[35px] p-[10px]">
+                </div>
+            </div>
+
+            <hr class="bg-[white] w-[110%] h-[4px] my-[4vh] rounded-full">
+
+            <div class="gender flex items-end justify-around">
+                <img src="static\media\images\gender.png" class="w-[36px]">
+                <div class="flex flex-col ml-[15px]">
+                    <label class="text-white font-semibold mb-[2px] ml-[5px]" for="">Gender</label>
+                    <div class="flex">
+                        <input required type="text" placeholder="Gender (M/F)" class=" rounded-[10px] w-[170px] h-[35px] p-[10px]">
+                    </div>
+                </div>
+            </div>
+            <div class="age flex items-end justify-around">
+                <img src="static\media\images\age.png" class="w-[36px]">
+                <div class="flex flex-col ml-[15px]">
+                    <label class="text-white font-semibold mb-[2px] ml-[5px]" for="">Date of birth</label>
+                    <div class="flex">
+                        <input required type="date" class=" rounded-[10px] w-[170px] h-[35px] p-[10px]">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="bg-[white] w-[110%] h-[4px] my-[4vh] rounded-full">
+
+            <div class="email flex items-end justify-around">
+                <img src="static\media\images\mailLog.png" class="w-[36px]">
+                <div class="flex flex-col ml-[15px]">
+                    <label class="text-white font-semibold mb-[2px] ml-[5px]" for="">Email</label>
+                    <div class="flex">
+                        <input required type="email" placeholder="Your email here" class=" rounded-[10px] w-[170px] h-[35px] p-[10px]">
+                    </div>
+                </div>
+            </div>
+            <div class="tel flex items-end justify-around">
+                <img src="static\media\images\tel.png" class="w-[36px]">
+                <div class="flex flex-col ml-[15px]">
+                    <label class="text-white font-semibold mb-[2px] ml-[5px]" for="">Tel.</label>
+                    <div class="flex">
+                        <input required type="tel" placeholder="Ex. 0123456789" class=" rounded-[10px] w-[170px] h-[35px] p-[10px]">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="bg-[white] w-[110%] h-[4px] my-[3vh] rounded-full"> 
+
+            <div class="pass flex items-end justify-around">
+                <img src="static\media\images\passwLog.png" class="w-[36px]">
+                <div class="flex flex-col ml-[15px]">
+                    <label class="text-white font-semibold mb-[2px] ml-[5px]" for="">Password</label>
+                    <div class="flex">
+                        <input required type="password" placeholder="Create a password" class=" rounded-[10px] w-[170px] h-[35px] p-[10px]">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="mt-[8vw] flex items-center justify-center rounded-[10px] bg-[#426A85] w-[90%] h-[45px] p-[10px] text-[white]">
+                <input type="submit" value="Create" name="" id="" class="text-[16px] font-semibold w-[130px] h-[40px]">
+            </div>
+        </form>
+
+
+        <p class="mx-[2vw] flex items-center justify-center text-[white] text-[13px] font-semibold leading-[15px] mt-[4vh]">Alrady have an account? <a href="login.html" class="font-extrabold">&nbsp; Log in!</a></p>
+    </div>
+
+    <!--Footer-->
+    <footer class="mt-[7vh]">
+        <h1 class="text-[#666666] text-[10px] mt-[5px] ibm font-semibold">2025 | <span class="text-[13px] font-extrabold">EduLift.com</span> by</h1>
+        <h1 class="text-[#666666] text-[10px] mt-[3px] ibm font-semibold">Francesco Scanni - All rights reserved</h1>
+    </footer>
+    
+</body>
+</html>

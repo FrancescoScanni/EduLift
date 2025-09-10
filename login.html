@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <title>EduLift - Login page</title>
+</head>
+<body class="h-[100%]">
+
+    <!--Home page - Desk & Mob-->
+    <a href="index.html" class="lg:hidden">
+        <div class="absolute w-[45px] h-[45px] ml-[6vw] mt-[2vh] rounded-full bg-[#ffffff] flex justify-center items-center shadow-xl">
+            <img src="static\media\images\arrow2.png" class="rotate-[180deg]">
+        </div>
+    </a>
+
+    <!--Header - Mobile-->
+    <header class="relative w-[100vw] h-[12.5vh] flex flex-col-reverse justify-center items-center mt-[20px]                 lg:hidden">
+        <h1 class="text-[#ffffff] text-[20px] font-extrabold">EduLift<span class="text-[#ffffff] text-[10px]">.com</span></h1>
+        <img src="static\media\images\logo.png" class="w-[80px] h-[60px]">
+    </header>
+
+    <!--Subtitle-->
+    <div class="mx-[10vw] flex flex-col items-center justify-center text-[white] text-[18px] font-semibold mt-[10vh]">
+        <p>Welcome back to</p>
+        <h1 class="text-[20px] font-bold">EduLift login interface</h1>
+    </div>
+
+
+    <!--login form-->
+    <div class="h-[45vh] flex flex-col py-[7vh] items-center mt-[3vh] bg-[#2b363f] mx-[10vw] rounded-[30px]">
+        <form action="" method="post" class="flex flex-col items-center text-[14px]">
+            <div class="mail flex items-center justify-around">
+                <img src="static\media\images\mailLog.png" class="w-[36px]">
+                <input type="email" placeholder="Enter your email" class="ml-[15px] rounded-[10px] w-[150px] h-[35px] p-[10px]">
+            </div>
+            <div class="password flex items-center justify-around mt-[20px] mb-[5vh]">
+                <img src="static\media\images\passwLog.png" class="w-[36px]">
+                <input type="password" placeholder="Your password here" class="ml-[15px] rounded-[10px] w-[150px] h-[35px] p-[10px]">
+            </div>
+            <div class="flex items-center justify-center rounded-[10px] bg-[#426A85] w-[130px] h-[40px] p-[10px] text-[white]">
+                <input type="submit" value="Log in" name="" id="" class="font-semibold w-[130px] h-[40px]">
+            </div>
+        </form>
+
+
+        <p class="mx-[2vw] flex items-center justify-center text-[white] text-[13px] font-semibold leading-[15px] mt-[4vh]">Don't have an account? <a href="signUp.html" class="font-extrabold">&nbsp; Create one!</a></p>
+    </div>
+
+    <!--Footer-->
+    <footer class="mt-[7vh]">
+        <h1 class="text-[#666666] text-[10px] mt-[5px] ibm font-semibold">2025 | <span class="text-[13px] font-extrabold">EduLift.com</span> by</h1>
+        <h1 class="text-[#666666] text-[10px] mt-[3px] ibm font-semibold">Francesco Scanni - All rights reserved</h1>
+    </footer>
+    
+</body>
+</html>
