@@ -1,17 +1,17 @@
 /*Fonts*/
-@import url("/static/css/fonts.css");
+@import url("static/css/fonts.css");
 
 /*Carousel*/
-@import url("/static/css/carousel.css");
+@import url("./static/css/carousel.css");
 
 /*Features*/
-@import url("/static/css/features.css");
+@import url("../static/css/features.css");
 
 /*Contacts*/
-@import url("/static/css/contacts.css");
+@import url("contacts.css");
 
 /*Footer*/
-@import url("/static/css/footer.css");
+@import url("footer.css");
 
 
 body{
