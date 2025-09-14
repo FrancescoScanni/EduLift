@@ -1,11 +1,11 @@
 /*Fonts*/
-@import url("static/css/fonts.css");
+@import url("fonts.css");
 
 /*Carousel*/
-@import url("./static/css/carousel.css");
+@import url("carousel.css");
 
 /*Features*/
-@import url("../static/css/features.css");
+@import url("features.css");
 
 /*Contacts*/
 @import url("contacts.css");
