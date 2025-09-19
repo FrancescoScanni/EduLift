@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <title>Text to Speech - Upload your notes to see the magic!</title>
 </head>
@@ -21,9 +23,7 @@
     <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40 hover:scale-110 transition transition-duration-200                                lg:w-[78px] lg:h-[78px] lg:ml-[88vw] lg:mt-[80vh]">
         <img  class="w-[45px] h-[45px] mb-[4px]                          lg:w-[68px] lg:h-[68px]" src="static\media\images\chatbot.png" alt="">
     </div>
-    <div class="fixed rounded-[20pxpx] w-[100px] h-[80px] ml-[59vw] mt-[74vh] flex justify-center items-center z-40 hover:scale-105 transition transition-duration-200                       lg:w-[150px] lg:h-[170px] lg:ml-[76vw] lg:mt-[62vh]   xl:w-[210px] xl:h-[190px] xl:ml-[76vw] xl:mt-[57vh]">
-        <img class="w-[150px] h-[75px] lg:h-[110px] xl:h-[170px] xl:w-[210px]" src="static\media\images\speech.png" alt="">
-    </div>
+   
 
 
     <!--Header - Mobile-->
@@ -67,7 +67,7 @@
     <section class="p-4 w-[100%] mt-[30px]            lg:mt-[0px] lg:p-0 lg:pb-[70px]">
         <form action="#" class="flex flex-col items-center">
             <div class="w-[50vw] h-[50px] bg-gradient-to-r from-gray-300 to-white rounded-[40px] flex justify-between items-center px-2 shadow-xl                               lg:w-[35vw] lg:h-[70px]">
-            <div class="ml-[20px] text-[15px] ibm font-semibold            lg:text-[20px]">Upload file</div>
+            <div id="upload" class="ml-[20px] text-[15px] ibm font-semibold            lg:text-[20px]">Upload file</div>
             <div class="w-[40px] h-[40px] rounded-full bg-[#2b363f] flex items-center justify-center cursor-pointer              lg:w-[55px] lg:h-[55px]">
                 <label for="fileInput" class="w-full h-full flex items-center justify-center cursor-pointer">
                     <img src="static\media\images\folder.png" class="w-[30px] h-[30px]">
@@ -76,7 +76,7 @@
             </div>
             </div>
             
-            <input type="submit" value="Generate" class="ibm text-[#ffffff] font-semibold mt-[20px] w-[28vw] h-[38px] bg-[#2b363f96] rounded-[20px] shadow-xl hover:scale-105 transition transition-duration-200                     lg:w-[20vw] lg:h-[55px] lg:rounded-[40px] lg:text-[20px] lg:mt-[40px] xl:w-[15vw] xl:h-[60px] xl:text-[24px]">
+            <input id="generateTTS" type="button" value="Generate" class="ibm text-[#ffffff] font-semibold mt-[20px] w-[28vw] h-[38px] bg-[#2b363f96] rounded-[20px] shadow-xl hover:scale-105 transition transition-duration-200                     lg:w-[20vw] lg:h-[55px] lg:rounded-[40px] lg:text-[20px] lg:mt-[40px] xl:w-[15vw] xl:h-[60px] xl:text-[24px]">
         </form>
     </section>
 
@@ -89,8 +89,8 @@
             <h1 class="text-white text-[27px] font-bold drop-shadow-lg           lg:text-[52px] lg:px-[8vw] lg:leading-[50px] lg:mt-[9vh] xl:text-[64px] xl:leading-[90px] xl:px-[12vw]">
                 Wait here until your audio is ready...
             </h1>
-            <input type="button" value="Download" class="ibm text-[#ffffff] font-semibold mt-[20px] w-[28vw] h-[38px] bg-[#2b363f96] rounded-[20px] shadow-xl hover:scale-105 transition transition-duration-200                              lg:w-[20vw] lg:h-[55px] lg:rounded-[40px] lg:text-[20px] lg:mt-[50px] lg:bg-[#2b363f99] xl:w-[15vw] xl:h-[60px] xl:text-[24px]">
-            <div class="audio mt-[30px] w-[70vw] h-[50px] bg-[#ffffff] rounded-[30px]                    lg:w-[55vw] lg:h-[60px] lg:mt-[50px] xl:w-[35vw] xl:mt-[90px] xl:h-[70px]"><p class="text-[#ffffff]">OK</p></div>
+            <a id="downloadTTS" href="#"><input type="button" value="Download" class="ibm text-[#ffffff] font-semibold mt-[20px] w-[28vw] h-[38px] bg-[#2b363f96] rounded-[20px] shadow-xl hover:scale-105 transition transition-duration-200                              lg:w-[20vw] lg:h-[55px] lg:rounded-[40px] lg:text-[20px] lg:mt-[50px] lg:bg-[#2b363f99] xl:w-[15vw] xl:h-[60px] xl:text-[24px]"></a>
+            <div class="audio mt-[30px] w-[70vw] h-[50px] bg-[#ffffff] rounded-[30px] flex items-center                    lg:w-[55vw] lg:h-[60px] lg:mt-[50px] xl:w-[35vw] xl:mt-[90px] xl:h-[70px]"><img src="static\media\images\ttsAudio.png" class="w-[50px] h-[50px] ml-[20px]"><img src="static\media\images\audioPlay.png" class="h-[45px] w-[440px] ml-[20px]"></div>
         </div>
     </div>
 
@@ -102,6 +102,6 @@
     </footer>
 
     
-    <script type="module" src="static/js/script.js"></script>
+    <script type="module" src="static/js/features/tts.js"></script>
 </body>
 </html>
