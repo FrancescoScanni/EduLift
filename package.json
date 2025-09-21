@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jspdf": "^3.0.3",
     "openai": "^5.22.0"
   }
 }

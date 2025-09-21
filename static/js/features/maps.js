@@ -23,11 +23,11 @@ fileInput.addEventListener('change', async (event) => {
     buttonTTS.style.scale="1.1"
     buttonTTS.classList.add("border-[4px]")
     upload.textContent="File inserted!"
-    const file = event.target.files[0]; // Get the first selected file
-    if (!file) return; // No file selected
+    const file = event.target.files[0]; 
+    if (!file) return
         try {
-            text = await file.text(); // Read file as text
-            // Store in variable
+            text = await file.text();
+            
             console.log("File content:", text);
         } catch (error) {
             console.error("Error reading file:", error);
@@ -37,7 +37,7 @@ fileInput.addEventListener('change', async (event) => {
 
 buttonTTS.addEventListener("click", async()=>{
 
-    const response =await fetch("/api/openai", { 
+    const response =await fetch("/api/openai", { //fetching directly the openai file linked to vercel
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
