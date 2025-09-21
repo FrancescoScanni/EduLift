@@ -37,25 +37,21 @@ fileInput.addEventListener('change', async (event) => {
 
 
 buttonTTS.addEventListener("click", async()=>{
-    const response = await fetch("https://api.openai.com/v1/responses", {
+
+    const response =await fetch("/api/openai", { 
         method: "POST",
-        headers: {
-        "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-        model: "gpt-4o-mini",
-        input: `Do a rich research improving these notes (dont use special symbols, just letters and a mermaid-translateable text). Then convert the result text into Mermaid code (respond only with the mermaid code and strip it not with backsticks but with ''. Optimize the mermaid code making it functional withouth adding any additional character and in a 14:9 layout, always start with graph TD):\n\n${text}`
+            input: `Do a rich research improving these notes (dont use special symbols, just letters and a mermaid-translateable text). Then convert the result text into Mermaid code (respond only with the mermaid code and strip it not with backsticks but with ''. Optimize the mermaid code making it functional withouth adding any additional character and in a 14:9 layout, always start with graph TD):\n\n${text}`
         })
     });
 
     const data = await response.json();
-    console.log(response)
 
     downloadLink.style.visibility="visible"
     wait.textContent="Your map is ready, click to see it!"
-    const mermaidCode = data.output?.[0]?.content?.[0]?.text || "No Mermaid code generated";
-
+    const mermaidCode = data.choices?.[0]?.message?.content || "No Mermaid code generated";
+    console.log(mermaidCode)
     //RENDER MAP
     const { svg } = await mermaid.render("generatedDiagram", mermaidCode);
     map.innerHTML = svg;
