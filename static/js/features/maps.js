@@ -17,6 +17,7 @@ let text
 
 
 
+
 //detect text from file
 fileInput.addEventListener('change', async (event) => {
     buttonTTS.style.scale="1.1"
