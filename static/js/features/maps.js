@@ -14,7 +14,6 @@ const dwnldMap=document.getElementById("dwnldMap") //a from maps
 downloadLink.style.visibility="hidden"
 const map =document.getElementById("map") //generated map
 let text
-let apiKey ="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"
 
 
 
