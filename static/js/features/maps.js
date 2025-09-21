@@ -1,10 +1,22 @@
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+mermaid.initialize({ 
+    startOnLoad: false, 
+    securityLevel: 'loose', // permette l’uso del canvas
+    themeVariables: { fontFamily: 'Arial' }
+});
 
 const buttonTTS = document.getElementById("generateTTS"); //generate button
 const upload =document.getElementById("upload") //upload file txt
 const fileInput=document.getElementById("fileInput") //file inserted
-const downloadLink = document.getElementById("downloadTTS"); //final dwnld
-let textContent
+const wait=document.getElementById("wait") //wait until...
+const downloadLink = document.getElementById("showMap")
+const dwnldMap=document.getElementById("dwnldMap") //a from maps
+downloadLink.style.visibility="hidden"
+const map =document.getElementById("map") //generated map
 let text
+
+
+
 
 //detect text from file
 fileInput.addEventListener('change', async (event) => {
@@ -22,22 +34,51 @@ fileInput.addEventListener('change', async (event) => {
     }
 });
 
-//generate an audio after the lick
-buttonTTS.addEventListener("click", async () => {
-    console.log(text)
-    const language = "en-us";
-    const apiKey = "e82319ee249b41d9b47479801a8466e3";
-    const url = `https://api.voicerss.org/?key=${apiKey}&hl=${language}&src=${encodeURIComponent(text)}&c=MP3&f=44khz_16bit_stereo`;
-    try {
-        const response = await fetch(url);
-        const blob = await response.blob();
-        const objectUrl = URL.createObjectURL(blob);
 
-        downloadLink.href = objectUrl;
-        downloadLink.style.display = "inline";
-    } catch (err) {
-        console.error("Errore TTS:", err);
+buttonTTS.addEventListener("click", async()=>{
+    const response = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: {
+        "Authorization": "Bearer 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", 
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+        model: "gpt-4o-mini", // or "gpt-5" if enabled
+        input: `Do a rich research improving these notes (dont use special symbols, just letters and a mermaid-translateable text). Then convert the result text into Mermaid code (respond only with the mermaid code and strip it not with backsticks but with ''. Optimize the mermaid code making it functional withouth adding any additional character and in a 14:9 layout, always start with graph TD):\n\n${text}`
+        })
+    });
+
+    const data = await response.json();
+    console.log(response)
+
+    downloadLink.style.visibility="visible"
+    wait.textContent="Your map is ready, click to see it!"
+    const mermaidCode = data.output?.[0]?.content?.[0]?.text || "No Mermaid code generated";
+
+    //RENDER MAP
+    const { svg } = await mermaid.render("generatedDiagram", mermaidCode);
+    map.innerHTML = svg;
+
+
+    //create download link for image
+    const svgElement = map.querySelector("svg");
+    if (svgElement) {
+        // Serialize the SVG
+        const svgData = new XMLSerializer().serializeToString(svgElement);
+        const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(svgBlob);
+
+        // Update download link to download the SVG directly
+        dwnldMap.setAttribute("href", url);
+        dwnldMap.setAttribute("download", "mermaid-diagram.svg");
+        
+        // Optional: revoke object URL when user clicks
+        dwnldMap.addEventListener("click", () => {
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+        });
     }
-    downloadLink.setAttribute('download', 'textToSpeech.mp3');
-});
+})
+
+
+
 

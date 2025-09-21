@@ -55,12 +55,14 @@
     <!--Info - Desk & Mob-->
     <div class="mt-[30px] text-[#ffffff] text-[28px] text-center font-bold py-[30px] px-[30px] mx-[30px] tracking-0 leading-[30px] drop-shadow-xl rounded-[20px] bg-[#2b363f96] shadow-xl flex flex-col items-center                    lg:mx-[19vw] lg:my-[8vh] lg:text-[38px] lg:leading-[40px] lg:py-[60px] lg:rounded-[30px] lg:border lg:border-[4px] lg:border-[#ffffff]">
         <h1 class="lg:px-[6vw]">AI Map Generator:<br> give your notes life</h1>
-        <div class="rounded-full w-[30vw] h-[38px] bg-white mt-[24px] shadow-xl flex justify-between items-center px-[4px] pl-[6px]         lg:h-[60px] lg:mt-[40px]">
-            <p class="text-[#000000] text-[10px] font-bold flex items-center          lg:h-[60px] lg:w-[15vw] lg:ml-[10px] lg:text-[18px]">Discover how</p>
-            <div class="w-[33px] h-[33px] rounded-full bg-[#2b363f] flex justify-center items-center hover:scale-105 transition transition-duration-200        lg:w-[45px] lg:h-[45px] lg:mr-[10px]">
-                <img src="static\media\images\arrow.png" class="w-[18px] h-[18px] rotate-[-45deg]">
-            </div>
-        </div>
+        <a href="https://mermaid.js.org/"><div class="rounded-full w-[30vw] h-[38px] bg-white mt-[24px] shadow-xl flex justify-between items-center px-[4px] pl-[6px]         lg:h-[60px] lg:mt-[40px]">
+            
+                <p class="text-[#000000] text-[10px] font-bold flex items-center          lg:h-[60px] lg:w-[15vw] lg:ml-[10px] lg:text-[18px]">Discover how</p>
+                <div class="w-[33px] h-[33px] rounded-full bg-[#2b363f] flex justify-center items-center hover:scale-105 transition transition-duration-200        lg:w-[45px] lg:h-[45px] lg:mr-[10px]">
+                    <img src="static\media\images\arrow.png" class="w-[18px] h-[18px] rotate-[-45deg]">
+                </div>
+            
+        </div></a>
         <p class="mt-[24px] text-[14px] font-normal leading-[19px] ibm                    lg:text-[22px] lg:leading-[30px] lg:px-[40px] lg:mt-[38px]">AI Map Generator creates structured concept maps highlighting key connections. This makes studying more visual for students with dyslexia or ADHD.</p>
     </div>
 
@@ -82,20 +84,19 @@
     </section>
 
     <!--map generation - Desk & Mob-->
-    <div class="relative h-[80vh] w-[100%] mt-[30px] flex flex-col items-center        xl:mt-[60px]     lg:h-[90vh]    xl:h-[140vh]">
+    <div class="relative h-[80vh] w-[100%] mt-[30px] flex flex-col items-center        xl:mt-[60px]     lg:h-[90vh]    xl:h-[100vh]">
         <img src="static\media\images\mapWait.jpg" class="absolute h-[100%] w-[100%] rounded-t-[25px] z-10        lg:hidden">
         <img src="static\media\images\mapDesk.jpg" class="hidden absolute h-[100%] w-[100%] rounded-t-[25px] z-10  lg:flex lg:opacity-60">
         
         <div class="mt-[8vh] px-[14vw] text-center absolute inset-0 flex flex-col items-center z-20      lg:mt-[4vh]">
-            <h1 class="text-white text-[27px] font-bold drop-shadow-lg leading-[30px]          lg:text-[52px] lg:px-[8vw] lg:leading-[50px] lg:mt-[2vh] xl:text-[64px] xl:leading-[90px] xl:px-[12vw]">
+            <h1 id="wait" class="text-white text-[27px] font-bold drop-shadow-lg leading-[30px]          lg:text-[52px] lg:px-[8vw] lg:leading-[50px] lg:mt-[2vh] xl:text-[64px] xl:leading-[90px] xl:px-[12vw]">
                 Wait here until your map is ready...
             </h1>
-            <input type="button" value="Download" class="ibm text-[#ffffff] hover:scale-105 transition transition-duration-200 font-semibold mt-[20px] w-[28vw] h-[38px] bg-[#2b363f] rounded-[20px] shadow-xl flex flex-col items-end                       lg:w-[20vw] lg:h-[55px] lg:rounded-[40px] lg:text-[20px] lg:mt-[40px] xl:w-[15vw] xl:h-[60px] xl:text-[24px]">
-            <div class="map mt-[30px] w-[70vw] h-[40vh] cursor-pointer hover:scale-105 transition transition-duration-200 bg-[#ffffff] rounded-[38px] opacity-60 shadow-xl border border-[#2b363f] border-[6px]              lg:mt-[30px] lg:w-[55vw] lg:h-[50vh] lg:mb-[10vh] xl:h-[80vh] xl:w-[50vw]">
-                <p class="text-[#ffffff] h-[50%]">OK</p>
-                <div class="w-[100%] h-[50%] mb-0 bg-[#000000] rounded-b-[30px] opacity-95 flex justify-center">
-                    <p class="text-white mt-[10px]            lg:text-[28px] lg:font-semibold">Click here!</p>
-                </div>
+
+
+            <a id="dwnldMap"><input id="showMap" type="button" value="Show map" class="ibm text-[#ffffff] hover:scale-105 transition transition-duration-200 font-semibold mt-[20px] w-[28vw] h-[38px] bg-[#2b363f] rounded-[20px] shadow-xl flex flex-col items-end                       lg:w-[20vw] lg:h-[55px] lg:rounded-[40px] lg:text-[20px] lg:mt-[40px] xl:w-[15vw] xl:h-[60px] xl:text-[24px]"></a>
+            <div class="map mt-[30px] w-[70vw] h-[40vh] cursor-pointer hover:scale-105 transition transition-duration-200 bg-[#ffffff] rounded-[38px] opacity-60 shadow-xl border border-[#2b363f] border-[6px] flex items-center justify-center         lg:pt-[10vh] lg:px-[2vh] lg:mt-[30px]  lg:mb-[10vh] xl:h-[40vh] xl:w-[50vw]">
+                <div id="map" class="mermaid w-[100%] h-[100%]"></div>
             </div>
         </div>
     </div>
@@ -106,6 +107,8 @@
         <h1 class="text-[#666666] text-[10px] mt-[3px] ibm font-semibold">Francesco Scanni - All rights reserved</h1>
     </footer>
 
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"></script>
     <script type="module" src="static/js/features/maps.js"></script>
 </body>
 </html>
