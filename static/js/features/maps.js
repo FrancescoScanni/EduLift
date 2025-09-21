@@ -43,7 +43,7 @@ buttonTTS.addEventListener("click", async()=>{
         "Content-Type": "application/json"
         },
         body: JSON.stringify({
-        model: "gpt-4o-mini", // or "gpt-5" if enabled
+        model: "gpt-4o-mini",
         input: `Do a rich research improving these notes (dont use special symbols, just letters and a mermaid-translateable text). Then convert the result text into Mermaid code (respond only with the mermaid code and strip it not with backsticks but with ''. Optimize the mermaid code making it functional withouth adding any additional character and in a 14:9 layout, always start with graph TD):\n\n${text}`
         })
     });
