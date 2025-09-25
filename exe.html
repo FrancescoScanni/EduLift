@@ -11,16 +11,18 @@
 <body>
 
     <!--Home page - Desk & Mob-->
-    <a href="" class="lg:hidden">
-        <div class="absolute w-[45px] h-[45px] ml-[6vw] mt-[2vh] rounded-full bg-[#ffffff] flex justify-center items-center shadow-xl">
-            <img src="static\media\images\arrow2.png" class="rotate-[180deg]">
+    <a href="index.html" class="z-40 lg:hidden">
+        <div class="z-40 absolute w-[45px] h-[45px] ml-[6vw] mt-[2vh] rounded-full bg-[#ffffff] flex justify-center items-center shadow-xl">
+            <img src="static\media\images\arrow2.png" class="rotate-[180deg] z-40">
         </div>
     </a>
 
     <!--Chatbot ICON - Desk & Mob-->
-    <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40 hover:scale-110 transition transition-duration-200                                lg:w-[78px] lg:h-[78px] lg:ml-[88vw] lg:mt-[80vh]">
-        <img  class="w-[45px] h-[45px] mb-[4px]                          lg:w-[68px] lg:h-[68px]" src="static\media\images\chatbot.png" alt="">
-    </div>
+    <a href="bot.html">
+        <div class="fixed rounded-[400px] w-[53px] h-[53px] bg-[#ffffff] ml-[80vw] mt-[85vh] flex justify-center items-center border border-[#426A85] border-[3px] z-40 hover:scale-110 transition transition-duration-200                                lg:w-[78px] lg:h-[78px] lg:ml-[88vw] lg:mt-[80vh]">
+            <img  class="w-[45px] h-[45px] mb-[4px]                          lg:w-[68px] lg:h-[68px]" src="static\media\images\chatbot.png" alt="">
+        </div>
+    </a>
     
 
 
@@ -40,14 +42,13 @@
         <!--menu and login-->
         <div class="flex gap-8 items-center mt-[2vh]">
             <div class="flex gap-6 items-center">
-                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">About us</h1></a>
-                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Features</h1></a>
-                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Chatbot</h1></a>
-                <a href=""><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Contact us</h1></a>
+                <a href="index.html"><h1 class="text-[16px] text-[#ffffff] font-semibold opacity-75 hover:scale-105 transition transition-duration-200 hover:opacity-[0.9]">Home</h1></a>
             </div>
-            <div class="logs w-[8vw] h-[3.5vw] bg-[#2b363f] opacity-[0.6] rounded-[10px] flex justify-center items-center hover:scale-105 hover:opacity-[0.9] transition transition-duration-200 cursor-pointer">
-                <input class="text-[#ffffff] cursor-pointer font-semibold text-[17px] shadow-xl" type="button" value="Login">
-            </div>
+            <a class="cursor-not-allowed" href="#">
+                <div class="cursor-not-allowed logs w-[8vw] h-[3.5vw] bg-[#2b363f] opacity-[0.6] rounded-[10px] flex justify-center items-center hover:scale-105 hover:opacity-[0.9] transition transition-duration-200">
+                    <input class="text-[#ffffff] font-semibold text-[17px] shadow-xl cursor-not-allowed" type="button" value="Login">
+                </div>
+            </a>
         </div>
 
 

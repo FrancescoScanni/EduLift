@@ -3,6 +3,7 @@ const buttonTTS = document.getElementById("generateTTS"); //generate button
 const upload =document.getElementById("upload") //upload file txt
 const fileInput=document.getElementById("fileInput") //file inserted
 const downloadLink = document.getElementById("downloadTTS"); //final dwnld
+downloadLink.style.visibility="hidden"
 let textContent
 let text
 
@@ -32,12 +33,16 @@ buttonTTS.addEventListener("click", async () => {
         const response = await fetch(url);
         const blob = await response.blob();
         const objectUrl = URL.createObjectURL(blob);
-
+        downloadLink.style.visibility="visible"
         downloadLink.href = objectUrl;
         downloadLink.style.display = "inline";
     } catch (err) {
         console.error("Errore TTS:", err);
+        downloadLink.href = "static/media/others/demo.mp3";
     }
     downloadLink.setAttribute('download', 'textToSpeech.mp3');
+    downloadLink.addEventListener("click",()=>{
+        window.location.href="tts.html"
+    })
 });
 

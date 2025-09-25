@@ -1,80 +1,54 @@
 import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
-mermaid.initialize({ 
-    startOnLoad: false, 
-    securityLevel: 'loose', // permette l’uso del canvas
-    themeVariables: { fontFamily: 'Arial' }
+
+mermaid.initialize({ startOnLoad:false, securityLevel:'loose', themeVariables:{ fontFamily:'Arial' } });
+
+const WORKER_URL = document.querySelector('meta[name="worker-url"]')?.content || "https://edulift.frascanni07.workers.dev/";
+const btn = document.getElementById("generateTTS");
+const fileInput = document.getElementById("fileInput");
+const upload = document.getElementById("upload");
+const wait = document.getElementById("wait");
+const show = document.getElementById("showMap");
+const dwnld = document.getElementById("dwnldMap");
+const map = document.getElementById("map");
+let text = "";
+
+async function ask(prompt){
+  const r = await fetch(WORKER_URL, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ prompt }) });
+  return (await r.json()).text;
+}
+
+fileInput.addEventListener("change", async e => {
+  const f = e.target.files?.[0];
+  if(!f) return;
+  text = await f.text();
+  upload.textContent = "File inserted!";
+  btn.style.scale = "1.1";
+  btn.classList.add("border-[4px]");
 });
 
-const buttonTTS = document.getElementById("generateTTS"); //generate button
-const upload =document.getElementById("upload") //upload file txt
-const fileInput=document.getElementById("fileInput") //file inserted
-const wait=document.getElementById("wait") //wait until...
-const downloadLink = document.getElementById("showMap")
-const dwnldMap=document.getElementById("dwnldMap") //a from maps
-downloadLink.style.visibility="hidden"
-const map =document.getElementById("map") //generated map
-let text
+btn.addEventListener("click", async () => {
+  if(!text) return;
+  btn.disabled = true;
+  wait.textContent = "Generating...";
+  show.style.visibility = "hidden";
+  map.innerHTML = "";
 
+  const p = `Do a rich research improving these notes (dont use special symbols, just letters and a mermaid-translateable text). Then convert the result text into Mermaid code (respond only with the mermaid code and strip it not with backticks but with ''. Optimize the mermaid code making it functional without adding any additional character and in a 14:9 layout, always start with graph TD):\n\n${text}`;
+  const code = (await ask(p)).trim();
 
+  const res = await mermaid.render("generatedDiagram", code);
+  const svg = typeof res === "string" ? res : res.svg;
+  map.innerHTML = svg;
 
+  const svgEl = map.querySelector("svg");
+  const url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svgEl)], { type:"image/svg+xml;charset=utf-8" }));
+  dwnld.setAttribute("href", url);
+  dwnld.setAttribute("download", "mermaid-diagram.svg");
+  show.style.visibility = "visible";
 
-//detect text from file
-fileInput.addEventListener('change', async (event) => {
-    buttonTTS.style.scale="1.1"
-    buttonTTS.classList.add("border-[4px]")
-    upload.textContent="File inserted!"
-    const file = event.target.files[0]; 
-    if (!file) return
-        try {
-            text = await file.text();
-            
-            console.log("File content:", text);
-        } catch (error) {
-            console.error("Error reading file:", error);
-    }
+  const revoke = () => { setTimeout(() => URL.revokeObjectURL(url), 1000); dwnld.removeEventListener("click", revoke); };
+  dwnld.addEventListener("click", revoke);
+
+  wait.textContent = "Your map is ready, click to see it!";
+  btn.disabled = false;
 });
-
-
-buttonTTS.addEventListener("click", async()=>{
-
-    const response =await fetch("/api/openai", { //fetching directly the openai file linked to vercel
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            input: `Do a rich research improving these notes (dont use special symbols, just letters and a mermaid-translateable text). Then convert the result text into Mermaid code (respond only with the mermaid code and strip it not with backsticks but with ''. Optimize the mermaid code making it functional withouth adding any additional character and in a 14:9 layout, always start with graph TD):\n\n${text}`
-        })
-    });
-
-    const data = await response.json();
-
-    downloadLink.style.visibility="visible"
-    wait.textContent="Your map is ready, click to see it!"
-    const mermaidCode = data.choices?.[0]?.message?.content || "No Mermaid code generated";
-    console.log(mermaidCode)
-    //RENDER MAP
-    const { svg } = await mermaid.render("generatedDiagram", mermaidCode);
-    map.innerHTML = svg;
-
-
-    //create download link for image
-    const svgElement = map.querySelector("svg");
-    if (svgElement) {
-        // Serialize the SVG
-        const svgData = new XMLSerializer().serializeToString(svgElement);
-        const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
-        const url = URL.createObjectURL(svgBlob);
-
-        // Update download link to download the SVG directly
-        dwnldMap.setAttribute("href", url);
-        dwnldMap.setAttribute("download", "mermaid-diagram.svg");
-        
-        // Optional: revoke object URL when user clicks
-        dwnldMap.addEventListener("click", () => {
-            setTimeout(() => URL.revokeObjectURL(url), 1000);
-        });
-    }
-})
-
-
-
-
